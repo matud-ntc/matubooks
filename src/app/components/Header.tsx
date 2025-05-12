@@ -61,10 +61,10 @@ export default function Header() {
 
       {showLoginModal && (
         <LoginModal
-          onClose={() => {
-            setShowLoginModal(false);
+          onClose={() => setShowLoginModal(false)}
+          onSuccess={() => {
             setIsLoggedIn(true);
-            setIsRoot(true); // asumiendo que solo vos te logueás
+            setIsRoot(true); // solo vos te logueás
           }}
         />
       )}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "../../../../lib/prisma";
 import ReadToggle from "./ReadToggle";
+import BookSynopsisEditor from "./BookSynopsisEditorWrapper";
 
 function slugify(title: string) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -51,9 +52,7 @@ export default async function BookPage({
           {book.author}
         </p>
 
-        <p className="text-base leading-relaxed text-justify whitespace-pre-line mb-6">
-          {book.synopsis}
-        </p>
+        <BookSynopsisEditor initialSynopsis={book.synopsis} bookId={book.id} />
 
         {styles.length > 0 && (
           <div className="text-sm text-neutral-600 mt-6">

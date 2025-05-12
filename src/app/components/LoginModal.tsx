@@ -2,7 +2,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function LoginModal({ onClose }: { onClose: () => void }) {
+export default function LoginModal({
+  onClose,
+  onSuccess,
+}: {
+  onClose: () => void;
+  onSuccess: () => void;
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,7 +22,8 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
 
     if (res.ok) {
       localStorage.setItem("auth", "true");
-      localStorage.setItem("root", "true"); // solo vos te logueás
+      localStorage.setItem("root", "true");
+      onSuccess();
       onClose();
     } else {
       alert("Credenciales inválidas");
