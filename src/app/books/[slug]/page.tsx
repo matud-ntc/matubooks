@@ -20,7 +20,7 @@ function slugify(title: string) {
 
 export async function generateStaticParams() {
   const filePath = path.join(process.cwd(), 'public', 'data', 'books.json');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const jsonData = await fs.promises.readFile(filePath, 'utf-8');
   const books: Book[] = JSON.parse(jsonData);
 
   return books.map((book) => ({
@@ -36,7 +36,7 @@ type Props = {
 
 export default async function BookPage({ params }: Props) {
   const filePath = path.join(process.cwd(), 'public', 'data', 'books.json');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const jsonData = await fs.promises.readFile(filePath, 'utf-8');
   const books: Book[] = JSON.parse(jsonData);
 
   const book = books.find((b) => slugify(b.title) === params.slug);
