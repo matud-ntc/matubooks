@@ -34,12 +34,24 @@ type Props = {
   };
 };
 
-export default async function BookPage({ params }: Props) {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'books.json');
-  const jsonData = await fs.promises.readFile(filePath, 'utf-8');
+export default async function BookPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  // Resuelvo la promesa de params antes de usar slug
+  const { slug } = await params;
+
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "data",
+    "books.json"
+  );
+  const jsonData = await fs.promises.readFile(filePath, "utf-8");
   const books: Book[] = JSON.parse(jsonData);
 
-  const book = books.find((b) => slugify(b.title) === params.slug);
+  const book = books.find((b) => slugify(b.title) === slug);
   if (!book) return notFound();
 
   const image = book.coverImage || book.image;
@@ -59,7 +71,9 @@ export default async function BookPage({ params }: Props) {
           />
         )}
 
-        <p className="text-lg text-neutral-700 font-medium mb-6">{book.author}</p>
+        <p className="text-lg text-neutral-700 font-medium mb-6">
+          {book.author}
+        </p>
 
         <p className="text-base leading-relaxed text-justify whitespace-pre-line mb-6">
           {book.synopsis}
