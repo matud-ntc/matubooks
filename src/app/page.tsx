@@ -12,7 +12,8 @@ type Book = {
   coverImage?: string;
   image?: string;
   synopsis: string;
-  style?: unknown; // porque puede ser JSON
+  style?: unknown;
+  isRead?: boolean;
 };
 
 export default function HomePage() {
@@ -130,6 +131,7 @@ export default function HomePage() {
             return (
               <motion.div
                 key={book.title}
+                className="h-full" 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.03, duration: 0.4 }}
@@ -137,18 +139,22 @@ export default function HomePage() {
               >
                 <Link
                   href={`/books/${slugify(book.title)}`}
-                  className="group block"
+                  className="group block h-full"
                 >
                   <div className="bg-[#fcf8ed] rounded-xl shadow hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
-                    <Image
-                      src={
-                        book.coverImage || book.image || "/images/fallback.jpg"
-                      }
-                      alt={book.title}
-                      width={300}
-                      height={450}
-                      className="w-full object-cover aspect-[2/3]"
-                    />
+                    <div className="aspect-[2/3] w-full relative">
+                      <Image
+                        src={
+                          book.coverImage ||
+                          book.image ||
+                          "/images/fallback.jpg"
+                        }
+                        alt={book.title}
+                        fill
+                        className="object-cover rounded-t-xl"
+                      />
+                    </div>
+
                     <div className="p-4 text-center flex flex-col justify-between flex-1">
                       <p className="text-base text-neutral-600 font-medium">
                         {book.author}
@@ -156,6 +162,11 @@ export default function HomePage() {
                       <h3 className="text-lg font-semibold mt-2">
                         {book.title}
                       </h3>
+                      {book.isRead && (
+                        <p className="text-xs text-neutral-500 italic mt-1">
+                          Leído
+                        </p>
+                      )}
                       {styles.length > 0 && (
                         <div className="text-xs text-neutral-500 mt-2 space-y-1">
                           {styles.map((s) => (

@@ -42,15 +42,6 @@ export default function Header() {
       </Link>
 
       <div className="flex items-center gap-4">
-        {isRoot && (
-          <Link
-            href="/admin"
-            className="text-sm bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-500 transition"
-          >
-            Admin
-          </Link>
-        )}
-
         {!isLoggedIn ? (
           <button
             onClick={() => setShowLoginModal(true)}

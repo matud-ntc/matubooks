@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "../../../../lib/prisma";
+import ReadToggle from "./ReadToggle";
 
 function slugify(title: string) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -69,6 +70,7 @@ export default async function BookPage({
             </div>
           </div>
         )}
+        <ReadToggle initialRead={book.isRead} bookId={book.id} />
 
         <div className="mt-10">
           <Link
