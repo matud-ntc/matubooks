@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 type Book = {
   title: string;
@@ -11,7 +12,7 @@ type Book = {
   coverImage?: string;
   image?: string;
   synopsis: string;
-  style?: string[]; // Nuevo campo
+  style?: string[];
 };
 
 export default function HomePage() {
@@ -102,33 +103,37 @@ export default function HomePage() {
         </div>
 
         <div className="grid gap-8 grid-cols-[repeat(auto-fill,minmax(180px,1fr))]">
-          {filtered.map((book) => (
-            <Link
+          {filtered.map((book, index) => (
+            <motion.div
               key={book.title}
-              href={`/books/${slugify(book.title)}`}
-              className="group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.03, duration: 0.4 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className="bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
-                <Image
-                  src={book.coverImage || book.image || '/images/fallback.jpg'}
-                  alt={book.title}
-                  width={300}
-                  height={450}
-                  className="w-full object-cover aspect-[2/3]"
-                />
-                <div className="p-4 text-center flex flex-col justify-between flex-1">
-                  <p className="text-base text-neutral-600 font-medium">{book.author}</p>
-                  <h3 className="text-lg font-semibold mt-2">{book.title}</h3>
-                  {book.style && (
-                    <div className="text-xs text-neutral-500 mt-2 space-y-1">
-                      {book.style.map((s) => (
-                        <div key={s}>{s}</div>
-                      ))}
-                    </div>
-                  )}
+              <Link href={`/books/${slugify(book.title)}`} className="group block">
+                <div className="bg-[#fcf8ed] rounded-xl shadow hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                  <Image
+                    src={book.coverImage || book.image || '/images/fallback.jpg'}
+                    alt={book.title}
+                    width={300}
+                    height={450}
+                    className="w-full object-cover aspect-[2/3]"
+                  />
+                  <div className="p-4 text-center flex flex-col justify-between flex-1">
+                    <p className="text-base text-neutral-600 font-medium">{book.author}</p>
+                    <h3 className="text-lg font-semibold mt-2">{book.title}</h3>
+                    {book.style && (
+                      <div className="text-xs text-neutral-500 mt-2 space-y-1">
+                        {book.style.map((s) => (
+                          <div key={s}>{s}</div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

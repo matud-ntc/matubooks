@@ -1,8 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
-// layout.tsx
 export const metadata: Metadata = {
   title: 'Biblioteca',
   description: 'Mi colección de libros personales',
@@ -19,12 +19,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <Head>
-        <link rel="icon" href="/images/matubookslogo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/images/matubookslogo.png" />
-        <meta name="theme-color" content="#f5efe4" />
-      </Head>
-      <body className="bg-[#fefbf6] text-neutral-900 font-serif">{children}</body>
+      <body className="bg-[#f5efe4] text-neutral-900 font-serif">
+        <header className="bg-[#f5efe4] px-6 py-4 shadow-sm">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition">
+            <Image
+              src="/images/matubookslogo.png"
+              alt="matubooks logo"
+              width={64}
+              height={64}
+              className="rounded-md"
+              priority
+            />
+            <span className="text-3xl font-bold hidden md:block">Matubooks</span>
+          </Link>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
