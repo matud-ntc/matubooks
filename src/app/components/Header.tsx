@@ -42,6 +42,15 @@ export default function Header() {
       </Link>
 
       <div className="flex items-center gap-4">
+        {isLoggedIn && isRoot && (
+          <Link
+            href="/add"
+            className="text-sm px-4 py-2 border border-green-700 text-green-800 rounded hover:bg-green-100 transition"
+          >
+            + Agregar libro
+          </Link>
+        )}
+
         {!isLoggedIn ? (
           <button
             onClick={() => setShowLoginModal(true)}
