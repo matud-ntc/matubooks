@@ -1,60 +1,35 @@
-import { notFound } from 'next/navigation';
-import fs from 'fs';
-import path from 'path';
-import Image from 'next/image';
-import Link from 'next/link';
-
-type Book = {
-  title: string;
-  author: string;
-  editorial: string;
-  coverImage?: string;
-  image?: string;
-  synopsis: string;
-  style?: string[];
-};
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { prisma } from "../../../../lib/prisma";
 
 function slugify(title: string) {
-  return title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 }
 
 export async function generateStaticParams() {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'books.json');
-  const jsonData = await fs.promises.readFile(filePath, 'utf-8');
-  const books: Book[] = JSON.parse(jsonData);
-
+  const books = await prisma.book.findMany();
   return books.map((book) => ({
     slug: slugify(book.title),
   }));
 }
-
-type Props = {
-  params: {
-    slug: string;
-  };
-};
 
 export default async function BookPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // Resuelvo la promesa de params antes de usar slug
-  const { slug } = await params;
+  const { slug } = await params; // Await the params promise first
 
-  const filePath = path.join(
-    process.cwd(),
-    "public",
-    "data",
-    "books.json"
-  );
-  const jsonData = await fs.promises.readFile(filePath, "utf-8");
-  const books: Book[] = JSON.parse(jsonData);
-
+  const books = await prisma.book.findMany();
   const book = books.find((b) => slugify(b.title) === slug);
+
   if (!book) return notFound();
 
   const image = book.coverImage || book.image;
+  const styles = Array.isArray(book.style)
+    ? book.style.filter((s): s is string => typeof s === "string")
+    : [];
 
   return (
     <main className="min-h-screen bg-[#f5efe4] px-6 py-10 text-neutral-900">
@@ -79,11 +54,11 @@ export default async function BookPage({
           {book.synopsis}
         </p>
 
-        {book.style && book.style.length > 0 && (
+        {styles.length > 0 && (
           <div className="text-sm text-neutral-600 mt-6">
             <h4 className="font-semibold mb-2">Estilos:</h4>
             <div className="flex flex-wrap justify-center gap-2">
-              {book.style.map((s) => (
+              {styles.map((s) => (
                 <span
                   key={s}
                   className="bg-neutral-200 text-neutral-700 px-3 py-1 rounded-full text-sm"
