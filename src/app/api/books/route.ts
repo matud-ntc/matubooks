@@ -1,9 +1,12 @@
-import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { NextResponse } from 'next/server';
+import { prisma } from '../../../../lib/prisma';
 
 export async function GET() {
-  const books = await prisma.book.findMany();
-  return NextResponse.json(books);
+  try {
+    const books = await prisma.book.findMany();
+    return NextResponse.json(books);
+  } catch (error) {
+    console.error('Error fetching books:', error);
+    return new NextResponse('Internal Server Error', { status: 500 });
+  }
 }
