@@ -1,0 +1,508 @@
+[
+  {
+    "title": "The Woman In The Window",
+    "author": "A.J. Finn",
+    "editorial": "William Morrow",
+    "image": "/images/thewomaninthewindow.webp",
+    "synopsis": "Anna Fox, una psicóloga infantil agorafóbica, vive recluida en su casa en Nueva York. Su rutina se ve alterada cuando cree presenciar un crimen en la casa de sus nuevos vecinos. La novela es un thriller psicológico que explora la percepción, la verdad y la locura. ",
+    "style": [
+      "thriller",
+      "psicológico"
+    ]
+  },
+  {
+    "title": "Retórica",
+    "author": "Aristóteles",
+    "editorial": "Plutón Ediciones",
+    "image": "/images/retorica.webp",
+    "synopsis": "Tratado fundamental sobre el arte de la persuasión. Aristóteles analiza los métodos y técnicas para convencer a una audiencia, estableciendo las bases de la retórica que influenciarían la comunicación y la argumentación en la cultura occidental. ",
+    "style": ["filosofía"]
+  },
+  {
+    "title": "La Máquina De Follar",
+    "author": "Charles Bukowski",
+    "editorial": "Compactos Anagrama",
+    "image": "/images/lamaquinadefollar.webp",
+    "synopsis": "Una colección de relatos que capturan la crudeza y el desencanto de la vida urbana, con el estilo inconfundible de Bukowski.",
+    "style": [
+      "realismo sucio",
+      "urbano"
+    ]
+  },
+  {
+    "title": "La Nave De Los Locos",
+    "author": "Cristina Peri Rossi",
+    "editorial": "Hum",
+    "image": "/images/lanavedeloslocos.webp",
+    "synopsis": "Una novela que mezcla lo real y lo fantástico, explorando temas de exilio, identidad y la condición humana.",
+    "style": [
+      "exilio",
+      "fantástico"
+    ]
+  },
+  {
+    "title": "La Escoba Del Sistema",
+    "author": "David Foster Wallace",
+    "editorial": "Pálido Fuego",
+    "image": "/images/laescobadelsistema.webp",
+    "synopsis": "La primera novela de Wallace, una sátira posmoderna que cuestiona la realidad, el lenguaje y la identidad a través de personajes excéntricos y situaciones absurdas.",
+    "style": [
+      "posmodernismo",
+      "sátira"
+    ]
+  },
+  {
+    "title": "Rebelión En La Granja",
+    "author": "George Orwell",
+    "editorial": "Debolsillo",
+    "image": "/images/revolucionenlagranja.webp",
+    "synopsis": "Una fábula política que narra la rebelión de los animales de una granja contra sus opresores humanos, simbolizando la corrupción del poder y la traición de los ideales revolucionarios.",
+    "style": [
+      "distopía",
+      "sátira política"
+    ]
+  },
+  {
+    "title": "Tokio Blues",
+    "author": "Haruki Murakami",
+    "editorial": "Maxi Tusquets",
+    "coverImage": "/images/tokioblues.webp",
+    "synopsis": "Una historia nostálgica sobre la juventud, el amor y la pérdida, narrada desde la perspectiva de un estudiante universitario en Tokio.",
+    "style": [
+      "realismo mágico",
+      "contemporáneo"
+    ]
+  },
+  {
+    "title": "Birthday Stories",
+    "author": "Haruki Murakami",
+    "editorial": "Vintage",
+    "coverImage": "/images/birthdaystories.webp",
+    "synopsis": "Una antología de cuentos de diversos autores, seleccionados por Murakami, que giran en torno a cumpleaños y las emociones asociadas a ellos.",
+    "style": [
+      "realismo mágico",
+      "contemporáneo"
+    ]
+  },
+  {
+    "title": "Kafka on the Shore",
+    "author": "Haruki Murakami",
+    "editorial": "Vintage",
+    "coverImage": "/images/kafkaontheshore.webp",
+    "synopsis": "Dos historias paralelas que se entrelazan en una narrativa surrealista, explorando temas de destino, conciencia y realidad.",
+    "style": [
+      "realismo mágico",
+      "contemporáneo"
+    ]
+  },
+  {
+    "title": "Crónica del pájaro que da cuerda al mundo",
+    "author": "Haruki Murakami",
+    "editorial": "Maxi Tusquets",
+    "coverImage": "/images/cronicadelpajaroquedabacuerdaalmundo.webp",
+    "synopsis": "Una novela que combina lo cotidiano con lo fantástico, siguiendo a un hombre en la búsqueda de su esposa desaparecida y de sí mismo.",
+    "style": [
+      "realismo mágico",
+      "contemporáneo"
+    ]
+  },
+  {
+    "title": "Trópico De Capricornio",
+    "author": "Henry Miller",
+    "editorial": "Bruguera Alfaguara",
+    "image": "/images/tropicodecapricornio.webp",
+    "synopsis": "Una obra autobiográfica que explora la vida del autor en Nueva York, marcada por la pobreza, el sexo y la búsqueda de sentido.",
+    "style": [
+      "autobiográfico",
+      "erótico"
+    ]
+  },
+  {
+    "title": "El Pasajero",
+    "author": "Henry Trujillo",
+    "editorial": "Ediciones De La Banda Oriental",
+    "image": "/images/elpasajero.webp",
+    "synopsis": "Una narración que aborda el viaje interior de un hombre enfrentado a sus propios demonios y recuerdos.",
+    "style": [
+      "uruguayo",
+      "realismo"
+    ]
+  },
+  {
+    "title": "Tres Novelas Cortas Y Otros Relatos",
+    "author": "Henry Trujillo",
+    "editorial": "Ediciones De La Banda Oriental",
+    "image": "/images/tresnovelascortas.webp",
+    "synopsis": "Una recopilación de historias que exploran la vida cotidiana y las complejidades de las relaciones humanas en Uruguay.",
+    "style": [
+      "uruguayo",
+      "realismo"
+    ]
+  },
+  {
+    "title": "Yo, Robot",
+    "author": "Isaac Asimov",
+    "editorial": "Sudamericana Joven",
+    "image": "/images/yorobot.webp",
+    "synopsis": "Una serie de historias que exploran las interacciones entre humanos y robots, y las implicaciones éticas de la inteligencia artificial.",
+    "style": [
+      "ciencia ficción",
+      "robots"
+    ]
+  },
+   {
+    "title": "Nunca Seremos Estrellas De Rock",
+    "author": "Jordi Sierra i Fabra",
+    "editorial": "Alfaguara",
+    "image": "/images/nuncaseremosestrellasderock.webp",
+    "synopsis": "",
+    "style": ["juvenil", "musical"]
+  },
+  {
+    "title": "El Astillero",
+    "author": "Juan Carlos Onetti",
+    "editorial": "Debolsillo",
+    "image": "/images/elastillero.webp",
+    "synopsis": "Ambientada en la ciudad ficticia de Santa María, la novela sigue a un hombre que acepta un trabajo en un astillero en decadencia, reflejando la desilusión y el desencanto.",
+    "style": ["existencialismo", "uruguayo", "realismo"]
+  },
+  {
+    "title": "El gigante enterrado",
+    "author": "Kazuo Ishiguro",
+    "editorial": "Anagrama",
+    "coverImage": "/images/elgiganteenterrado.webp",
+    "synopsis": "Ambientada en la Inglaterra medieval, la novela sigue a una pareja de ancianos en busca de su hijo, explorando temas de memoria, olvido y reconciliación.",
+    "style": ["fantasía", "alegoría", "memoria"]
+  },
+  {
+    "title": "Meditaciones",
+    "author": "Marco Aurelio",
+    "editorial": "Ariel",
+    "image": "/images/meditaciones.webp",
+    "synopsis": "Colección de pensamientos y reflexiones personales del emperador romano Marco Aurelio. Escritas como ejercicios de introspección, estas meditaciones ofrecen una visión del estoicismo y la búsqueda de la virtud en la vida diaria.",
+    "style": [
+      "filosofía"
+    ]
+  },
+  {
+    "title": "Nuestro Iglú En El Ártico - Relatos Escogidos",
+    "author": "Mario Levrero",
+    "editorial": "Criatura Editora",
+    "image": "/images/nuestroigluenelartico.webp",
+    "synopsis": "Selección de cuentos que sumergen al lector en mundos oníricos y surrealistas, característicos del estilo de Levrero. Las historias exploran lo cotidiano desde perspectivas inusuales, desafiando la lógica y la realidad convencional.",
+    "style": [
+      "surrealismo",
+      "uruguayo"
+    ]
+  },
+  {
+    "title": "Trilogía Involuntaria",
+    "author": "Mario Levrero",
+    "editorial": "Debolsillo",
+    "image": "/images/trilogiainvoluntaria.webp",
+    "synopsis": "Una serie de tres novelas que combinan lo cotidiano con lo fantástico, explorando la mente y las obsesiones del autor.",
+    "style": [
+      "surrealismo",
+      "uruguayo"
+    ]
+  },
+  {
+    "title": "La Máquina De Pensar En Gladis",
+    "author": "Mario Levrero",
+    "editorial": "Criatura Editora",
+    "image": "/images/lamaquinadepensarengladis.webp",
+    "synopsis": "Una novela que mezcla ciencia ficción y humor, donde un hombre construye una máquina para entender a su vecina Gladis.",
+    "style": [
+      "surrealismo",
+      "uruguayo"
+    ]
+  },
+  {
+    "title": "Así Habló Zaratustra",
+    "author": "Nietzsche",
+    "editorial": "Globus",
+    "image": "/images/asihablozaratustra.jpeg",
+    "synopsis": "Obra filosófica en la que Nietzsche presenta sus ideas a través del personaje de Zaratustra, un profeta que predica sobre el superhombre, la voluntad de poder y la muerte de Dios. El libro combina narrativa y filosofía en un estilo poético y provocador.",
+    "style": [
+      "filosofía",
+      "aforismos"
+    ]
+  },
+  {
+    "title": "El Declive",
+    "author": "Osamu Dazai",
+    "editorial": "Al Margen",
+    "image": "/images/eldeclieve.webp",
+    "synopsis": "Kazuko, una joven de familia aristocrática venida a menos tras la Segunda Guerra Mundial, lucha por encontrar su lugar en una sociedad en transformación. La novela aborda temas de decadencia, desesperanza y la búsqueda de identidad en tiempos difíciles.",
+    "style": [
+      "existencialismo",
+      "autobiográfico"
+    ]
+  },
+  {
+    "title": "Schoolgirl",
+    "author": "Osamu Dazai",
+    "editorial": "One Peace Books",
+    "image": "/images/schoolgirl.webp",
+    "synopsis": "Narrada desde la perspectiva de una adolescente japonesa, la novela ofrece una visión íntima de sus pensamientos y emociones durante un solo día. A través de su monólogo interior, se exploran temas de identidad, crecimiento y la complejidad de la vida cotidiana.",
+    "style": [
+      "existencialismo",
+      "autobiográfico"
+    ]
+  },
+  {
+    "title": "No Longer Human",
+    "author": "Osamu Dazai",
+    "editorial": "NDBooks",
+    "image": "/images/nolongerhuman.webp",
+    "synopsis": "Obra semiautobiográfica que sigue la vida de Yozo, un hombre que se siente alienado de la sociedad y lucha por encontrar su lugar en el mundo. A través de sus confesiones, la novela explora la desesperación, la identidad y la condición humana.",
+    "style": [
+      "existencialismo",
+      "autobiográfico"
+    ]
+  },
+  {
+    "title": "La trilogía de Nueva York",
+    "author": "Paul Auster",
+    "editorial": "Booket",
+    "coverImage": "/images/trilogianuevayork.webp",
+    "synopsis": "Tres novelas interconectadas que exploran la identidad, la realidad y la escritura a través de historias de detectives poco convencionales.",
+    "style": [
+      "posmodernismo",
+      "detectivesco"
+    ]
+  },
+  {
+    "title": "Diario De Invierno",
+    "author": "Paul Auster",
+    "editorial": "Anagrama",
+    "image": "/images/diariodeinvierno.webp",
+    "synopsis": "Una introspección profunda en la vida del autor, donde reflexiona sobre su pasado, sus relaciones y el paso del tiempo.",
+    "style": [
+      "posmodernismo",
+      "detectivesco"
+    ]
+  },
+  {
+    "title": "Tierra Madre",
+    "author": "Paul Theroux",
+    "editorial": "Alfaguara",
+    "image": "/images/tierramadre.webp",
+    "synopsis": "Una novela que explora las complejidades de las relaciones familiares y las tensiones culturales en un contexto exótico.",
+    "style": ["viajes", "familiar", "cultural"]
+  },
+  {
+    "title": "Electric Dreams",
+    "author": "Philip K. Dick",
+    "editorial": "Minotauro",
+    "image": "/images/electricdreams.webp",
+    "synopsis": "Una colección de relatos cortos que inspiraron la serie de televisión homónima, explorando futuros distópicos y realidades alternativas.",
+    "style": [
+      "ciencia ficción",
+      "distopía"
+    ]
+  },
+  {
+    "title": "¿Sueñan Los Androides Con Ovejas Eléctricas?",
+    "author": "Philip K. Dick",
+    "editorial": "Edhasa Nebulae",
+    "image": "/images/suenanlosandroidesconovejaselectricas.webp",
+    "synopsis": "La novela que inspiró la película Blade Runner, cuestiona la naturaleza de la humanidad en un mundo donde los androides son casi indistinguibles de los humanos.",
+    "style": [
+      "ciencia ficción",
+      "distopía"
+    ]
+  },
+  {
+    "title": "La República",
+    "author": "Platón",
+    "editorial": "Plutón Ediciones",
+    "coverImage": "/images/larepublica.webp",
+    "synopsis": "Una obra filosófica que presenta diálogos sobre la justicia, la organización de la ciudad ideal y la naturaleza del conocimiento.",
+    "style": ["filosofía"]
+  },
+  {
+    "title": "Crónicas Marcianas",
+    "author": "Ray Bradbury",
+    "editorial": "Booket",
+    "image": "/images/cronicasmarcianas.webp",
+    "synopsis": "Una colección de relatos que narran la colonización de Marte por parte de los humanos, abordando temas de colonización, nostalgia y el impacto humano en nuevos mundos.",
+    "style": [
+      "ciencia ficción",
+      "fantasía"
+    ]
+  },
+  {
+    "title": "Rendición",
+    "author": "Ray Loriga",
+    "editorial": "Alfaguara",
+    "image": "/images/rendicion.webp",
+    "synopsis": "Una novela distópica que explora la pérdida de la privacidad y la identidad en una sociedad vigilada, ganadora del Premio Alfaguara de Novela.",
+    "style": ["distopía", "psicológico", "intimista"]
+  },
+  {
+    "title": "De qué hablamos cuando hablamos de amor",
+    "author": "Raymond Carver",
+    "editorial": "Compactos Anagrama",
+    "coverImage": "/images/dequehablamoscuandohablamosdeamor.webp",
+    "synopsis": "Una serie de cuentos que retratan las tensiones y desafíos en las relaciones humanas, destacando la fragilidad del amor y la comunicación.",
+    "style": [
+      "minimalismo",
+      "realismo sucio"
+    ]
+  },
+  {
+    "title": "Cathedral",
+    "author": "Raymond Carver",
+    "editorial": "Vintage",
+    "coverImage": "/images/cathedral.webp",
+    "synopsis": "Un relato que narra la experiencia transformadora de un hombre al interactuar con un amigo ciego de su esposa, explorando temas de percepción y conexión humana.",
+    "style": [
+      "minimalismo",
+      "realismo sucio"
+    ]
+  },
+  {
+    "title": "Observada",
+    "author": "Renée Knight",
+    "editorial": "Letras De Bolsillo",
+    "image": "/images/observada.webp",
+    "synopsis": "Un thriller psicológico donde una mujer descubre que su vida privada ha sido expuesta en una novela, desatando una serie de eventos inquietantes.",
+    "style": [
+      "thriller",
+      "psicológico"
+    ]
+  },
+  {
+    "title": "Los detectives salvajes",
+    "author": "Roberto Bolaño",
+    "editorial": "Debolsillo",
+    "coverImage": "/images/losdetectivessalvajes.webp",
+    "synopsis": "La búsqueda de dos poetas por una misteriosa escritora desaparecida, narrada a través de múltiples voces y escenarios alrededor del mundo.",
+    "style": [
+      "narrativa",
+      "experimental"
+    ]
+  },
+  {
+    "title": "El Gato Que Amaba Los Libros",
+    "author": "Sosuke Natsukawa",
+    "editorial": "Grijalbo Narrativa",
+    "image": "/images/elgatoqueamabaaloslibros.webp",
+    "synopsis": "Rintaro, un joven tímido, hereda la librería de su abuelo. Un día, un gato parlante llamado Tora aparece y le propone una misión: rescatar libros maltratados. Juntos emprenden una aventura mágica que celebra el amor por la lectura y el poder transformador de los libros.",
+    "style": [
+      "literatura juvenil",
+      "fantasía"
+    ]
+  },
+  {
+    "title": "Japanese Death Poems",
+    "author": "Varios Autores",
+    "editorial": "Tuttle",
+    "image": "/images/japanesedeathpoems.webp",
+    "synopsis": "Antología que recopila los últimos poemas escritos por monjes zen y poetas haiku japoneses antes de su muerte. Estas composiciones reflejan la serenidad y aceptación del final de la vida, ofreciendo una visión profunda de la cultura japonesa y su relación con la muerte.",
+    "style": ["poesía", "zen", "muerte", "japonés"]
+  },
+  {
+    "title": "Austerlitz",
+    "author": "W.G. Sebald",
+    "editorial": "Anagrama",
+    "coverImage": "/images/austerlitz.webp",
+    "synopsis": "La historia de un historiador que, tras descubrir su origen judío y su pasado como niño refugiado, emprende un viaje para reconstruir su identidad.",
+    "style": ["memoria", "holocausto", "histórico", "ensayo narrativo"]
+  }
+,
+  {
+    "title": "Neuromante",
+    "author": "William Gibson",
+    "editorial": "Minotauro",
+    "coverImage": "/images/neuromante.webp",
+    "synopsis": "Una novela pionera del ciberpunk que sigue a un hacker en un mundo dominado por corporaciones y tecnología avanzada.",
+    "style": [
+      "ciberpunk",
+      "ciencia ficción"
+    ]
+  },
+  {
+    "title": "Conde Cero",
+    "author": "William Gibson",
+    "editorial": "Minotauro Escenciales",
+    "image": "/images/condecero.webp",
+    "synopsis": "Secuela de Neuromante, profundiza en el mundo del ciberespacio y las corporaciones omnipresentes, siguiendo a nuevos personajes en una trama de intriga tecnológica.",
+    "style": [
+      "ciberpunk",
+      "ciencia ficción"
+    ]
+  },
+  {
+    "title": "Una relación perfecta",
+    "author": "William Trevor",
+    "editorial": "Salamandra",
+    "coverImage": "/images/unarelacionperfecta.webp",
+    "synopsis": "Una colección de relatos que exploran las complejidades de las relaciones humanas, abordando temas como la memoria, los secretos y las oportunidades perdidas.",
+    "style": [
+      "relatos",
+      "relaciones humanas"
+    ]
+  },
+  {
+    "title": "Caballos Desbocados",
+    "author": "Yukio Mishima",
+    "editorial": "Alianza Editorial",
+    "image": "/images/caballosdesbocados.webp",
+    "synopsis": "Segunda novela de la tetralogía El mar de la fertilidad, narra la historia de Isao, un joven idealista que planea un golpe de Estado para restaurar los valores tradicionales en Japón. La obra explora temas de fanatismo, lealtad y el conflicto entre modernidad y tradición. ",
+    "style": [
+      "filosófico",
+      "japonés",
+      "clásico"
+    ]
+  },
+  {
+    "title": "El Sol Y El Acero",
+    "author": "Yukio Mishima",
+    "editorial": "Alianza Editorial",
+    "image": "/images/elsolyelacero.webp",
+    "synopsis": "Ensayo autobiográfico donde Mishima reflexiona sobre la dualidad entre la palabra y la acción, la mente y el cuerpo. Explora su fascinación por la disciplina física y el ideal de la belleza, revelando aspectos profundos de su filosofía personal.",
+    "style": [
+      "filosófico",
+      "japonés",
+      "clásico"
+    ]
+  },
+  {
+    "title": "Una Vida En Venta",
+    "author": "Yukio Mishima",
+    "editorial": "Alianza Editorial",
+    "image": "/images/unavidaenventa.webp",
+    "synopsis": "Hanio Yamada, un joven publicista, decide vender su vida tras un fallido intento de suicidio. Publica un anuncio ofreciendo su existencia al mejor postor, lo que lo lleva a vivir situaciones insólitas y peligrosas que le harán replantearse el valor de su vida.",
+    "style": [
+      "filosófico",
+      "japonés",
+      "clásico"
+    ]
+  },
+  {
+    "title": "La Corrupción De Un Ángel",
+    "author": "Yukio Mishima",
+    "editorial": "Alianza Editorial",
+    "image": "/images/lacorrupciondeunangel.gif",
+    "synopsis": "Última entrega de la tetralogía El mar de la fertilidad. El juez Honda adopta a Tōru, creyendo que es la reencarnación de su amigo Kiyoaki. A medida que Tōru crece, muestra una personalidad perturbadora, llevando a Honda a cuestionar sus creencias sobre el destino y la reencarnación. ",
+    "style": [
+      "filosófico",
+      "japonés",
+      "clásico"
+    ]
+  },
+  {
+    "title": "The Temple Of Dawn",
+    "author": "Yukio Mishima",
+    "editorial": "Vintage",
+    "image": "/images/thetempleofdawn.webp",
+    "synopsis": "Tercera novela de la tetralogía El mar de la fertilidad. El juez Honda viaja a Tailandia y se encuentra con una princesa que cree es la reencarnación de su amigo Kiyoaki. La obra explora temas de espiritualidad, deseo y la búsqueda de sentido en un mundo cambiante.",
+    "style": [
+      "filosófico",
+      "japonés",
+      "clásico"
+    ]
+  }
+]
