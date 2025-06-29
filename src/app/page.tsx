@@ -79,9 +79,19 @@ export default function HomePage() {
     <main className="min-h-screen bg-[#f2ebe1] px-6 py-10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-6 mb-12">
-          <h1 className="text-5xl font-serif font-bold text-center">
-            Biblioteca
-          </h1>
+          <div className="flex justify-between items-center flex-wrap gap-4">
+  <h1 className="text-5xl font-serif font-bold text-center sm:text-left">
+    Biblioteca
+  </h1>
+
+  <Link
+    href="/wishlist"
+    className="text-sm px-4 py-2 border border-blue-700 text-blue-800 rounded hover:bg-blue-100 transition"
+  >
+    Ver wishlist
+  </Link>
+</div>
+
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <input

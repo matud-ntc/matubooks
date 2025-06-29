@@ -12,6 +12,7 @@ export default function AddBookPage() {
   const [coverImage, setCoverImage] = useState("");
   const [synopsis, setSynopsis] = useState("");
   const [style, setStyle] = useState("");
+  const [inWishlist, setInWishlist] = useState(false);
 
   useEffect(() => {
     const root = localStorage.getItem("root");
@@ -35,6 +36,7 @@ export default function AddBookPage() {
         coverImage,
         synopsis,
         style,
+        inWishlist,
       }),
     });
 
@@ -123,7 +125,18 @@ export default function AddBookPage() {
               className="w-full p-2 border border-neutral-300 rounded bg-[#fffaf2] focus:outline-none focus:ring-2 focus:ring-neutral-400"
             />
           </div>
-
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="wishlist"
+              checked={inWishlist}
+              onChange={(e) => setInWishlist(e.target.checked)}
+              className="w-4 h-4"
+            />
+            <label htmlFor="wishlist" className="text-sm font-medium">
+              Añadir a wishlist
+            </label>
+          </div>
           <div className="text-right">
             <button
               type="submit"
