@@ -18,6 +18,7 @@ model Book {
   synopsis   String
   style      Json?
   isRead     Boolean @default(false)
+  inWishlist Boolean @default(false)
 }
 
 model User {

@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    } 
   },
   "include": [
     "next-env.d.ts",
@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "prisma/seed.js"
-  ],
+, "lib/prisma.js", "lib/prisma.js"  ],
   "exclude": ["node_modules"]
 }

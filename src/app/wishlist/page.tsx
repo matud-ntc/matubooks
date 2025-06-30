@@ -76,10 +76,10 @@ export default function WishlistPage() {
                   transition={{ delay: index * 0.03, duration: 0.4 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="bg-[#fcf8ed] rounded-xl shadow hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                  <div className="bg-[#fcf8ed] rounded-xl shadow hover:shadow-lg transition-shadow duration-300 flex flex-col h-full min-h-[360px]">
                     <Link
                       href={`/books/${slugify(book.title)}`}
-                      className="group block"
+                      className="group block h-full"
                     >
                       <div className="aspect-[2/3] w-full relative">
                         <Image
@@ -93,32 +93,32 @@ export default function WishlistPage() {
                           className="object-cover rounded-t-xl"
                         />
                       </div>
+
+                      <div className="p-4 text-center flex flex-col justify-between flex-1">
+                        <div>
+                          <p className="text-base text-neutral-600 font-medium">
+                            {book.author}
+                          </p>
+                          <h3 className="text-lg font-semibold mt-2">
+                            {book.title}
+                          </h3>
+                          {styles.length > 0 && (
+                            <div className="text-xs text-neutral-500 mt-2 space-y-1">
+                              {styles.map((s) => (
+                                <div key={s}>{s}</div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </Link>
 
-                    <div className="p-4 text-center flex flex-col flex-1 justify-between">
-                      <div>
-                        <p className="text-base text-neutral-600 font-medium">
-                          {book.author}
-                        </p>
-                        <h3 className="text-lg font-semibold mt-2">
-                          {book.title}
-                        </h3>
-                        {styles.length > 0 && (
-                          <div className="text-xs text-neutral-500 mt-2 space-y-1">
-                            {styles.map((s) => (
-                              <div key={s}>{s}</div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-
-                      <button
-                        onClick={() => handleMarkAsBought(book.id)}
-                        className="mt-4 px-4 py-1 bg-neutral-800 text-white text-sm rounded hover:bg-neutral-700 transition"
-                      >
-                        Marcar como comprado
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => handleMarkAsBought(book.id)}
+                      className="mt-2 mb-4 mx-4 px-4 py-1 bg-neutral-800 text-white text-sm rounded hover:bg-neutral-700 transition"
+                    >
+                      Marcar como comprado
+                    </button>
                   </div>
                 </motion.div>
               );

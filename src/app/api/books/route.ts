@@ -16,10 +16,22 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { title, author, editorial, synopsis, coverImage, image, style } = body;
+  const {
+    title,
+    author,
+    editorial,
+    synopsis,
+    coverImage,
+    image,
+    style,
+    inWishlist = false, // <- por defecto falso
+  } = body;
 
   if (!title || !author || !editorial || !synopsis) {
-    return NextResponse.json({ error: "Faltan campos obligatorios" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Faltan campos obligatorios" },
+      { status: 400 }
+    );
   }
 
   try {
@@ -32,12 +44,16 @@ export async function POST(req: Request) {
         coverImage: coverImage || undefined,
         image: image || undefined,
         style: style ? JSON.parse(style) : undefined,
+        inWishlist,
       },
     });
 
     return NextResponse.json(newBook, { status: 201 });
   } catch (err) {
     console.error("Error creando libro:", err);
-    return NextResponse.json({ error: "No se pudo crear el libro" }, { status: 500 });
+    return NextResponse.json(
+      { error: "No se pudo crear el libro" },
+      { status: 500 }
+    );
   }
 }
