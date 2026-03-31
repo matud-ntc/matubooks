@@ -14,6 +14,7 @@ type Book = {
   synopsis: string;
   style?: unknown;
   isRead?: boolean;
+  inWishlist?: boolean;
 };
 
 export default function HomePage() {
@@ -26,9 +27,9 @@ export default function HomePage() {
     fetch("/api/books") // asumiendo que usás API ahora, si no volvé a `/data/books.json`
       .then((res) => res.json())
       .then((data) => {
-        const sorted = data.sort((a: Book, b: Book) =>
-          a.author.localeCompare(b.author),
-        );
+        const sorted = data
+          .filter((book: Book) => !book.inWishlist)
+          .sort((a: Book, b: Book) => a.author.localeCompare(b.author));
         setBooks(sorted);
       })
       .catch((err) => console.error("Error cargando libros:", err));
