@@ -12,7 +12,7 @@ function slugify(title: string) {
 
 export async function generateStaticParams() {
   const books = await prisma.book.findMany();
-  return books.map((book) => ({
+  return books.map((book: { title: string }) => ({
     slug: slugify(book.title),
   }));
 }
