@@ -63,14 +63,15 @@ export async function GET(
   }
 
   // Devolver desde DB si existen y no se pide refresh
-  if (!refresh && Array.isArray(book.recommendations) && book.recommendations.length > 0) {
-    return NextResponse.json(book.recommendations);
+  const saved = (book as Record<string, unknown>).recommendations;
+  if (!refresh && Array.isArray(saved) && saved.length > 0) {
+    return NextResponse.json(saved);
   }
 
   try {
     const recommendations = await fetchFromClaude(book);
 
-    await prisma.book.update({
+    await (prisma.book.update as Function)({
       where: { id: bookId },
       data: { recommendations },
     });
