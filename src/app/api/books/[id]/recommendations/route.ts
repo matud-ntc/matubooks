@@ -71,10 +71,7 @@ export async function GET(
   try {
     const recommendations = await fetchFromClaude(book);
 
-    await (prisma.book.update as Function)({
-      where: { id: bookId },
-      data: { recommendations },
-    });
+    await prisma.$executeRaw`UPDATE "Book" SET recommendations = ${JSON.stringify(recommendations)}::jsonb WHERE id = ${bookId}`;
 
     return NextResponse.json(recommendations);
   } catch (error) {
