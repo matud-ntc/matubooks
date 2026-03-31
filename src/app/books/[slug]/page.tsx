@@ -25,7 +25,7 @@ export default async function BookPage({
   const { slug } = await params;
 
   const books = await prisma.book.findMany();
-  const book = books.find((b) => slugify(b.title) === slug);
+  const book = books.find((b: { title: string }) => slugify(b.title) === slug);
 
   if (!book) return notFound();
 
