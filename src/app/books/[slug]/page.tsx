@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "../../../../lib/prisma";
 import ReadToggle from "./ReadToggle";
-import BookSynopsisEditor from "./BookSynopsisEditorWrapper";
+import BookEditorWrapper from "./BookEditorWrapper";
+import BookRecommendations from "./BookRecommendations";
 
 function slugify(title: string) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -21,7 +22,7 @@ export default async function BookPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // Await the params promise first
+  const { slug } = await params;
 
   const books = await prisma.book.findMany();
   const book = books.find((b) => slugify(b.title) === slug);
@@ -52,7 +53,9 @@ export default async function BookPage({
           {book.author}
         </p>
 
-        <BookSynopsisEditor initialSynopsis={book.synopsis} bookId={book.id} />
+        <p className="text-base leading-relaxed text-justify whitespace-pre-line mb-6">
+          {book.synopsis}
+        </p>
 
         {styles.length > 0 && (
           <div className="text-sm text-neutral-600 mt-6">
@@ -69,7 +72,20 @@ export default async function BookPage({
             </div>
           </div>
         )}
+
         <ReadToggle initialRead={book.isRead} bookId={book.id} />
+
+        <BookEditorWrapper
+          bookId={book.id}
+          initialTitle={book.title}
+          initialAuthor={book.author}
+          initialEditorial={book.editorial}
+          initialSynopsis={book.synopsis}
+          initialCoverImage={book.coverImage ?? ""}
+          initialStyle={styles}
+        />
+
+        <BookRecommendations bookId={book.id} />
 
         <div className="mt-10">
           <Link

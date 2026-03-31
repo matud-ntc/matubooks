@@ -10,7 +10,8 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@prisma/client": "^6.7.0",
+    "@anthropic-ai/sdk": "^0.81.0",
+    "@prisma/client": "^6.19.2",
     "bcrypt": "^6.0.0",
     "framer-motion": "^12.10.5",
     "lucide-react": "^0.510.0",

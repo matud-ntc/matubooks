@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -17,8 +18,9 @@ model Book {
   image      String?
   synopsis   String
   style      Json?
-  isRead     Boolean @default(false)
-  inWishlist Boolean @default(false)
+  isRead          Boolean @default(false)
+  inWishlist      Boolean @default(false)
+  recommendations Json?
 }
 
 model User {

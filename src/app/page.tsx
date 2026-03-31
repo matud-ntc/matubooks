@@ -22,9 +22,10 @@ export default function HomePage() {
   const [filter, setFilter] = useState("");
   const [sortBy, setSortBy] = useState<"author" | "title">("author");
   const [selectedStyle, setSelectedStyle] = useState<string>("Todos");
+  const [readFilter, setReadFilter] = useState<"todos" | "leidos" | "no-leidos">("todos");
 
   useEffect(() => {
-    fetch("/api/books") // asumiendo que usás API ahora, si no volvé a `/data/books.json`
+    fetch("/api/books")
       .then((res) => res.json())
       .then((data) => {
         const sorted = data
@@ -70,8 +71,16 @@ export default function HomePage() {
     const matchesStyle =
       selectedStyle === "Todos" || styles.includes(selectedStyle);
 
-    return matchesQuery && matchesStyle;
+    const matchesRead =
+      readFilter === "todos" ||
+      (readFilter === "leidos" && book.isRead) ||
+      (readFilter === "no-leidos" && !book.isRead);
+
+    return matchesQuery && matchesStyle && matchesRead;
   });
+
+  const totalBooks = books.length;
+  const readBooks = books.filter((b) => b.isRead).length;
 
   const slugify = (title: string) =>
     title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -81,18 +90,22 @@ export default function HomePage() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-6 mb-12">
           <div className="flex justify-between items-center flex-wrap gap-4">
-  <h1 className="text-5xl font-serif font-bold text-center sm:text-left">
-    Biblioteca
-  </h1>
+            <div>
+              <h1 className="text-5xl font-serif font-bold text-center sm:text-left">
+                Biblioteca
+              </h1>
+              <p className="text-sm text-neutral-500 mt-1">
+                {readBooks} de {totalBooks} leídos
+              </p>
+            </div>
 
-  <Link
-    href="/wishlist"
-    className="text-sm px-4 py-2 border border-blue-700 text-blue-800 rounded hover:bg-blue-100 transition"
-  >
-    Ver wishlist
-  </Link>
-</div>
-
+            <Link
+              href="/wishlist"
+              className="text-sm px-4 py-2 border border-blue-700 text-blue-800 rounded hover:bg-blue-100 transition"
+            >
+              Ver wishlist
+            </Link>
+          </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <input
@@ -103,7 +116,17 @@ export default function HomePage() {
               className="border border-neutral-300 px-4 py-2 rounded-md shadow-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-neutral-400"
             />
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap justify-end">
+              <select
+                value={readFilter}
+                onChange={(e) => setReadFilter(e.target.value as "todos" | "leidos" | "no-leidos")}
+                className="border border-neutral-300 px-3 py-2 rounded-md"
+              >
+                <option value="todos">Todos</option>
+                <option value="leidos">Leídos</option>
+                <option value="no-leidos">No leídos</option>
+              </select>
+
               <select
                 value={sortBy}
                 onChange={(e) =>
