@@ -78,7 +78,8 @@ export async function GET(
 
     return NextResponse.json(recommendations);
   } catch (error) {
-    console.error("Error fetching recommendations:", error);
-    return NextResponse.json({ error: "Failed to get recommendations" }, { status: 500 });
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Error fetching recommendations:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
