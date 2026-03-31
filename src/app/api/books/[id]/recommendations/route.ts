@@ -32,7 +32,7 @@ Respondé únicamente con un JSON válido, sin texto extra ni bloques de código
   { "title": "...", "author": "...", "reason": "..." }
 ]
 
-El campo "reason" debe ser una frase corta (máximo 15 palabras) explicando por qué es similar.`;
+El campo "reason" debe ser una frase corta (máximo 20 palabras) explicando por qué es similar.`;
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
