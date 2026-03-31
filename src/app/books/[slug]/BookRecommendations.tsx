@@ -36,7 +36,7 @@ export default function BookRecommendations({ bookId }: { bookId: number }) {
   return (
     <div className="mt-12 border-t border-neutral-200 pt-10">
       <h2 className="text-2xl font-serif font-bold mb-6 text-neutral-800">
-        Libros similares
+        Recomendaciones similares
       </h2>
 
       {loading && (
