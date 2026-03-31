@@ -49,7 +49,7 @@ export default function BookRecommendations({ bookId }: { bookId: number }) {
       {error && (
         <p className="text-red-600 text-sm">
           {error}{" "}
-          <button onClick={load} className="underline">
+          <button onClick={() => load()} className="underline">
             Reintentar
           </button>
         </p>
