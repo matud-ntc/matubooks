@@ -15,6 +15,7 @@ const nextConfig = {
       "upload.wikimedia.org",
       "cdn9.luna.com.uy",
       "http2.mlstatic.com",
+      "cfluna.com",
     ],
   },
   reactStrictMode: true,
