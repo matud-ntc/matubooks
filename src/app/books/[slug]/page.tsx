@@ -30,7 +30,7 @@ export default async function BookPage({
   if (!book) return notFound();
 
   const image = book.coverImage || book.image;
-  const styles = Array.isArray(book.style)
+  const styles: string[] = Array.isArray(book.style)
     ? book.style.filter((s: unknown): s is string => typeof s === "string")
     : [];
 
